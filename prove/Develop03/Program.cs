@@ -28,9 +28,9 @@ class Program
                     Console.WriteLine(scripture.GetDisplayText());
                     scripture.HideRandomWords(1);
                 }
-            }
-            else {
-                break;
+                else {
+                    break;
+                }
             }
         }
     }

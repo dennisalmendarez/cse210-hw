@@ -32,6 +32,12 @@ public class Scripture
         {   
             displayText.Append(word.IsHidden() ? " _____ " : word.GetDisplayText());
             displayText.Append(" ");
+            
+            if (word.GetDisplayText() == " _____ ") {
+                displayText.Append(word.IsHidden() ? " _____ " : word.GetDisplayText());
+                displayText.Append(" ");
+            }
+
         }
         return displayText.ToString().Trim();
     }
