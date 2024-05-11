@@ -26,17 +26,18 @@ public class Scripture
 
     public string GetDisplayText() {
 
-        StringBuilder displayText = new StringBuilder();
+        StringBuilder displayText = new StringBuilder(); // stringbuilder helps modify strings variable which make it posible to work with the foreach
         
         foreach (Word word in _words)
         {   
             displayText.Append(word.IsHidden() ? " _____ " : word.GetDisplayText());
             displayText.Append(" ");
             
-            if (word.GetDisplayText() == " _____ ") {
-                displayText.Append(word.IsHidden() ? " _____ " : word.GetDisplayText());
-                displayText.Append(" ");
-            }
+            //atemp to not hide already hiding word //
+            // if (word.GetDisplayText() == " _____ ") {
+            //     displayText.Append(word.IsHidden() ? " _____ " : word.GetDisplayText());
+            //     displayText.Append(" ");
+            // }
 
         }
         return displayText.ToString().Trim();
