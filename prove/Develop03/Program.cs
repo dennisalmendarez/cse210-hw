@@ -10,8 +10,6 @@ class Program
         
         Console.WriteLine(reference.GetDisplayText());
         Console.WriteLine(scripture.GetDisplayText());
-       
-        scripture.HideRandomWords(5);
 
         string userInput;
         while (true)
