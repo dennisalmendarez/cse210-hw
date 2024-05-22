@@ -5,15 +5,31 @@ public class Activity {
     protected string _description;
     protected int _duration;
 
-    public Activity(string name, string description, int duration){
-        _name = name;
-        _description = description;
-        _duration = duration;
+    public Activity(){
+        _name = "";
+        _description = "";
+        _duration = 0;
     }
     
     public void DisplayStartingMessage(){
-        Console.WriteLine($"Starting {_name}");
-        Console.WriteLine(_description);
+    Console.WriteLine($"Starting {_name}");
+    Console.WriteLine(_description);
+
+    int input;
+    bool validInput = false;
+
+    do {
+        Console.WriteLine("How long do you want your session to last in seconds?");
+        string userInput = Console.ReadLine();
+        if (!int.TryParse(userInput, out input)) {
+            Console.WriteLine("Invalid input. Please enter a number.");
+        } else {
+            validInput = true;
+        }
+    } while (!validInput);
+        
+        _duration = input;
+
         ShowSpiner(3);
     }
 

@@ -12,8 +12,11 @@ public class ListingActivity : Activity{
         "When have you felt the Holy Ghost this month?",
         "Who are some of your personal heroes?"};
 
-     public ListingActivity(string name, string description, int duration) : base(name, description, duration){
-    }
+    public ListingActivity() : base(){
+        _name = "Listing Activity.";
+        _description = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
+
+    }   
     public void Run(){
         DisplayStartingMessage();
 
@@ -32,12 +35,17 @@ public class ListingActivity : Activity{
                 _count++;
             }
         }
-
+        Console.WriteLine();
         Console.WriteLine($"You listed {_count} items:");
         foreach (var response in userResponses)
         {
             Console.WriteLine($"- {response}");
         }
+
+        Console.WriteLine();
+        Console.WriteLine("Well Done!");
+        Console.WriteLine();
+        Console.WriteLine($"You have complete another {_duration} seconds of the Listing Activity");
 
         DisplayEndingMessage();
     }

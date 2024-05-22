@@ -23,7 +23,9 @@ public class ReflectingActivity : Activity{
         "How can you keep this experience in mind in the future?"
     };
 
-    public ReflectingActivity(string name, string description, int duration) : base (name, description, duration){
+    public ReflectingActivity() : base (){
+        _name = "Reflecting Activity.";
+        _description = "This activity will help you reflect on times in your life when you have shown strength and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.";
     }
 
     public void Run(){
@@ -31,14 +33,22 @@ public class ReflectingActivity : Activity{
         DisplayPrompt();
         ShowSpiner(5);
 
-        DateTime endTime = DateTime.Now.AddSeconds(_duration);
-        while (DateTime.Now < endTime)
-        {
-            DisplayQuestion();
-            ShowSpiner(5);
-        }
+        Console.WriteLine("When you have Something in mind press enter to continue.");
+        var userInput1 = Console.ReadLine();
+        
+        while (userInput1 == ""){
 
-        DisplayEndingMessage();
+            DateTime endTime = DateTime.Now.AddSeconds(_duration);
+            while (DateTime.Now < endTime)
+            {
+                DisplayQuestion();
+                ShowSpiner(5);
+            }
+            DisplayEndingMessage();
+            Console.WriteLine();
+            Console.WriteLine();
+            break;
+        }
     }
 
     public string GetRandomPromt(){

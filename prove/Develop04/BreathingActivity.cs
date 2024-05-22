@@ -3,13 +3,13 @@ using System.Security.Cryptography.X509Certificates;
 
 public class BreathingActivity : Activity{
 
-    public BreathingActivity(string name, string description, int duration) : base(name, description, duration){
-        _name = name;
-        _description = description;
+    public BreathingActivity() : base(){
+        _name = "Breathing Activity.";
+        _description = "The activity will help you relax by walking through breathing in and out slowly. Clear your mind and focus on your breathing.";
     }
 
     public void Run() {
-        Console.WriteLine("_________________________________________________"); //spacing
+        Console.WriteLine(); //spacing
         Console.WriteLine(); //spacing
         DisplayStartingMessage();
         DateTime startTime = DateTime.Now;
@@ -19,11 +19,9 @@ public class BreathingActivity : Activity{
         do {//Repeat this for the duration (loop)
             Console.Write("Breathe in ... "); //Have the user breathe in for 5 seconds
             ShowCountDown(3);
-            ShowSpiner(3);
             Console.WriteLine();
             Console.Write("Breathe out ...  "); //Have the user breathe out for 5 seconds
             ShowCountDown(3);
-            ShowSpiner(3);
             Console.WriteLine();//spacing
             Console.WriteLine();//spacing
         }
