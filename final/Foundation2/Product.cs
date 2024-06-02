@@ -2,11 +2,11 @@ using System;
 
 public class Product{
     private string _name;
-    private int _productId;
-    private int _price;
+    private string _productId;
+    private double _price;
     private int _quantity;
 
-    public Product(string name, int productId, int price, int quantity)
+    public Product(string name, string productId, double price, int quantity)
     {
         _name = name;
         _productId = productId;
@@ -14,11 +14,15 @@ public class Product{
         _quantity = quantity;
     }
 
-    public int GetCalculatePrice(){
+    public double CalculateTotalCost(){
         return _price * _quantity;
     }
 
-    public string GetProducts(){
-        return $"{_name} - {_productId}";
+    public string GetName(){
+        return _name;
+    }
+
+    public string GetProductID(){
+        return _productId;
     }
 }
