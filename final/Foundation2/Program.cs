@@ -47,24 +47,28 @@ class Program
         Console.WriteLine(order1.GetShippingLabel());
         Console.WriteLine();
         Console.WriteLine($"Shipping cost: ${order1.GetShippingCost()}");
-        Console.WriteLine($"Total cost: ${order1.CalculateTotalCost()}\n");
+        Console.WriteLine($"Total cost: ${order1.CalculateTotalCost()}");
+        Console.WriteLine("----------------------------------------------------------\n");
 
         Console.WriteLine(order2.GetPackingLabel());
         Console.WriteLine(order2.GetShippingLabel());
         Console.WriteLine();
         Console.WriteLine($"Shipping cost: ${order2.GetShippingCost()}");
-        Console.WriteLine($"Total cost: ${order2.CalculateTotalCost()}\n");
+        Console.WriteLine($"Total cost: ${order2.CalculateTotalCost()}");
+        Console.WriteLine("----------------------------------------------------------\n");
 
         Console.WriteLine(order3.GetPackingLabel());
         Console.WriteLine(order3.GetShippingLabel());
         Console.WriteLine();
         Console.WriteLine($"Shipping cost: ${order3.GetShippingCost()}");
-        Console.WriteLine($"Total cost: ${order3.CalculateTotalCost()}\n");
+        Console.WriteLine($"Total cost: ${order3.CalculateTotalCost()}");
+        Console.WriteLine("----------------------------------------------------------\n");
 
         Console.WriteLine(order4.GetPackingLabel());
         Console.WriteLine(order4.GetShippingLabel());
         Console.WriteLine();
         Console.WriteLine($"Shipping cost: ${order4.GetShippingCost()}");
-        Console.WriteLine($"Total cost: ${order4.CalculateTotalCost()}\n");
+        Console.WriteLine($"Total cost: ${order4.CalculateTotalCost()}");
+        Console.WriteLine("----------------------------------------------------------\n");
     }
 }
